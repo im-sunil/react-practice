@@ -1,8 +1,12 @@
+body {
+    font-family: system-ui, BlinkMacSystemFont, -apple-system, sans-serif;
+}
+
 form {
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 0 auto;
+    margin: 50px;
 }
 
 label {
@@ -12,7 +16,19 @@ input,
 textarea,
 select {
     margin: 5px;
+    padding: 10px;
+}
+select {
+    height: 2.25rem;
+    line-height: normal;
 }
 button {
+    margin: 5px;
+    padding: 10px;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
     margin: 5px;
 }

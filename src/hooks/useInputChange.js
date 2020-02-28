@@ -4,9 +4,13 @@ let useInputChange = (defaultValues = {}) => {
   let [input, setInput] = useState(defaultValues);
 
   let handleInputChange = ({ currentTarget }) => {
+    let value =
+      currentTarget.type == "checkbox"
+        ? currentTarget.checked
+        : currentTarget.value;
     setInput({
       ...input,
-      [currentTarget.name]: currentTarget.value,
+      [currentTarget.name]: value,
     });
   };
   let reset = defaultValues => {
